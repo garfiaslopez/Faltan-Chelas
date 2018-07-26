@@ -1,0 +1,84 @@
+
+<!--    THIS   ===>  Section -->
+
+    <div layout="column">
+
+        <div flex layout="row" layout-sm="column">
+
+            <div flex="50" layout="column" flex-sm="100">
+
+                <md-subheader id="subtitle"  class="md-primary">Filtros</md-subheader>
+                <md-radio-group ng-model="Sell.FilterSelected" ng-change="Sell.FilterChanged()">
+
+                    <md-radio-button value="0">Hoy</md-radio-button>
+                    <md-radio-button value="1">Semana</md-radio-button>
+                    <md-radio-button value="2">Mes</md-radio-button>
+                    <md-radio-button value="3">Año</md-radio-button>
+                    <md-radio-button value="4">Rango</md-radio-button>
+
+                </md-radio-group>
+            </div>
+
+            <div flex="50" layout="column" flex-sm="100">
+                <md-subheader id="subtitle"  class="md-primary">Rango</md-subheader>
+
+                <h4>Fecha Inicial</h4>
+                <input type="text" pick-a-date="Sell.FechaInicio" pick-a-date-options="Sell.options" ng-disabled="Sell.DisableRange" />
+                <br><br>
+                <h4>Fecha Final</h4>
+                <input type="text" pick-a-date="Sell.FechaFinal" pick-a-date-options="Sell.options" ng-disabled="Sell.DisableRange"/>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div flex layout="row" layout-align="space-around center">
+
+            <md-button id="primarybtn" ng-click="Sell.Search()" class="md-raised md-primary">Buscar</md-button>
+
+        </div>
+
+                <br>
+
+        <md-divider></md-divider>
+                <br>
+
+        <div flex layout="row" layout-align="space-around center">
+            <h4>Ventas: #{{Sell.CountSells}} </h4>
+            <h4>Total: ${{Sell.TotalSells}}</h4>
+        </div>
+
+        <md-content>
+            <md-data-table-container>
+                <table md-data-table md-progress="Spends.isLoading">
+                    <thead md-order="date" md-trigger="onOrderChange">
+                        <tr>
+                            <th name="Fecha"></th>
+                            <th name="Producto"></th>
+                            <th name="Usuario"></th>
+                            <th name="Vendedor"></th>
+                            <th name="Total"></th>
+                            <th name="Status"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr md-auto-select ng-repeat="SellDB in Sell.SellsOnDB">
+                            <td>{{SellDB.date}}</td>
+                            <td>{{SellDB.products[0].denomination}}</td>
+                            <td>{{SellDB.user_id.email.address}}</td>
+                            <td>{{SellDB.vendor_id.name}}</td>
+                            <td>{{SellDB.total | number: 1}}</td>
+                            <td>{{SellDB.status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-data-table-container>
+
+            <md-data-table-pagination md-limit="10" md-page="1" md-total="{{Sell.SellsOnDB.length}}" md-trigger="onPaginationChange"></md-data-table-pagination>
+
+        </md-content>
+
+</div>

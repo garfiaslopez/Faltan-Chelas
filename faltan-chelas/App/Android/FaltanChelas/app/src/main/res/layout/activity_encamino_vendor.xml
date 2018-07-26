@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gargui3.faltanchelas.Encamino">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/usuarioNombreLinear">
+
+        <com.google.android.gms.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/getMyLocationEncamino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/ic_action_location_2"
+            android:theme="@style/AppTheme.FloatingActionButton"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/usuarioNombreLinear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:layout_above="@+id/lineaBlanca"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:touchscreenBlocksFocus="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="TU CLIENTE"/>
+
+        <TextView
+            android:id="@+id/nombreUsuarioEncamino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineaBlanca"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/textWhite"
+        android:layout_above="@+id/accionesLinear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/accionesLinear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center|bottom"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:padding="3dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:clickable="true"
+            android:drawableTop="@mipmap/ic_action_phone_start"
+            android:text="LLAMAR"
+            android:onClick="realizarLlamada"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:padding="3dip"
+            android:gravity="center"
+            android:clickable="true"
+            android:textAlignment="center"
+            android:drawableTop="@mipmap/ic_action_sms"
+            android:text="SMS"
+            android:onClick="mandarSms"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/entregado"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:drawableTop="@mipmap/ic_action_tick"
+            android:text="Entregado" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

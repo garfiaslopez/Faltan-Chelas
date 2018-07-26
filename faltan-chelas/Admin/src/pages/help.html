@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<section layout="column">
+
+    <md-content>
+        <md-table-container>
+            <table md-table md-progress="Help.isLoading">
+                <thead md-head>
+                    <tr md-row>
+                        <th md-column>Fecha</th>
+                        <th md-column>Titulo</th>
+                        <th md-column>Descripcion</th>
+                        <th md-column>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-auto-select ng-repeat="HelpDB in Help.HelpsOnDB">
+                        <td md-cell>{{HelpDB.date}}</td>
+                        <td md-cell>{{HelpDB.subject}}</td>
+                        <td md-cell>{{HelpDB.description}}</td>
+                        <td md-cell>{{HelpDB.user_id.name}}</td>
+                        <td md-cell>
+                            <md-icon md-svg-icon="delete" aria-label="delete" ng-click="Help.Delete(HelpDB)" class="md-secondary md-hue-3"></md-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-data-table-pagination md-limit="10" md-page="1" md-total="{{HelpsOnDB.length}}" md-trigger="onPaginationChange"></md-data-table-pagination>
+
+    </md-content>
+
+</section>

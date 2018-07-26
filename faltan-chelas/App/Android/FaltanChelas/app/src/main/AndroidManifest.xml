@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gargui3.faltanchelas">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".UrbanNotifications"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".AccessActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccessActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
+        <activity
+            android:name=".MenuChelero"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Resumen"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".MenuChelero"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuChelero" />
+        </activity>
+        <activity
+            android:name=".Encamino"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Buscando"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".Login"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".AccessActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccessActivity" />
+        </activity>
+        <activity
+            android:name=".Repartir"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".AccessActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccessActivity" />
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".Login"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+        </activity>
+        <activity
+            android:name=".Terminos"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".AccessActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccessActivity" />
+        </activity>
+        <activity android:name=".Calificar"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <receiver android:name=".SampleAirshipReceiver"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED" />
+                <action android:name="com.urbanairship.push.OPENED" />
+                <action android:name="com.urbanairship.push.RECEIVED" />
+                <action android:name="com.urbanairship.push.DISMISSED" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

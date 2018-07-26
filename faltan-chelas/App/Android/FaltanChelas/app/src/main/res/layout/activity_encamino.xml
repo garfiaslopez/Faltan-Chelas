@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.gargui3.faltanchelas.Encamino">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/inprogress"
+        android:id="@+id/imageView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/chelasEncamino"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/usuarioNombreLinear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:layout_above="@+id/lineaBlanca"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:touchscreenBlocksFocus="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="TU REPARTIDOR"/>
+
+        <TextView
+            android:id="@+id/nombreUsuarioEncamino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineaBlanca"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/textWhite"
+        android:layout_above="@+id/accionesLinear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/accionesLinear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center|bottom"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
+            android:padding="3dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:clickable="true"
+            android:drawableTop="@mipmap/ic_action_phone_start"
+            android:text="LLAMAR"
+            android:onClick="realizarLlamada"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
+            android:padding="3dip"
+            android:gravity="center"
+            android:clickable="true"
+            android:textAlignment="center"
+            android:drawableTop="@mipmap/ic_action_sms"
+            android:text="SMS"
+            android:onClick="mandarSms"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

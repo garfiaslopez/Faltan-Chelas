@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/marcaChela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textStyle="bold"
+            android:text="Corona"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/precioChela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="$90 pesos el six"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:gravity="right"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp">
+
+        <ImageView
+            android:id="@+id/menosChelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:src="@mipmap/arrowleft" />
+
+        <TextView
+            android:id="@+id/cantidadChelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/masChelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:src="@mipmap/arrow" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

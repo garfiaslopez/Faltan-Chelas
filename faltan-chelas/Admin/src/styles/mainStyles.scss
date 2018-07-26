@@ -1,0 +1,122 @@
+/*
+*   Main styles
+*/
+$lightblue: #3E99ED;
+$blackblue: #0B57A7;
+$blue: #2196F3;
+$orange: #FC6B47;
+$green: #2FA14A;
+$blackgreen: #0F4F1D;
+$pink: #E91E63;
+$teal: #009688;
+$brown: #795548;
+$bluegrey: #607D8B;
+$lightred: #F4383E;
+$red: #9B2629; 
+$yellow: #EFC028;
+
+$gray: #3D3B34;
+
+
+$break-small: 400px;
+$break-large: 500px;
+
+//DASHBOARD COLORS:
+.navBar{
+  background-color: $gray;
+  color:white;
+}
+.blue {
+  background-color: $blue;
+  color: white;
+}
+.lightblue {
+  background-color: $lightblue;
+  color: white;
+}
+.blackblue {
+  background-color: $blackblue;
+  color: white;
+}
+.orange {
+  background-color: $orange;
+  color: white;
+}
+.green {
+  background-color: $green;
+  color: white;
+}
+.blackgreen {
+  background-color: $blackgreen;
+  color: white;
+}
+.pink {
+  background-color: $pink;
+  color: white;
+}
+.teal {
+  background-color: $teal;
+  color: white;
+}
+.brown {
+  background-color: $brown;
+  color: white;
+}
+.bluegrey {
+  background-color: $bluegrey;
+  color: white;
+}
+.lightred {
+  background-color: $lightred;
+  color: white;
+}
+.red {
+  background-color: $red;
+  color: white;
+}
+.selected{
+  color: $yellow;
+}
+.DashboardIcon{
+  color:white;
+}
+.TitleInBox{
+
+  @media screen and (max-width: $break-small) {
+    margin-top: 0px !important;
+  }
+  @media screen and (min-width: $break-large) {
+    margin-top: -20px !important;
+  }
+
+}
+.md-tile-content{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px;
+  text-overflow: ellipsis; 
+}
+.md-tile-content h3 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 1.3em; 
+}
+.md-tile-content h4 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 0.9em; 
+}
+.md-tile-content p {
+    margin: 0 0 3px 0;
+    font-size: 0.75em; 
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+

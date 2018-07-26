@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+    <EditText
+        android:id="@+id/nameTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:hint="@string/nameTarjeta"/>
+
+    <EditText
+        android:id="@+id/numeroTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLength="16"
+        android:inputType="number"
+        android:hint="@string/numeroTarjeta"/>
+
+    <EditText
+        android:id="@+id/codigoTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLength="3"
+        android:inputType="number"
+        android:hint="@string/codigoTarjeta"/>
+
+    <EditText
+        android:id="@+id/mesTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/mesTarjeta"/>
+
+    <EditText
+        android:id="@+id/anoTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/anoTarjeta"/>
+
+    <Button
+        android:id="@+id/agregarTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"/>
+
+</LinearLayout>

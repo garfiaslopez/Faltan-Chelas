@@ -1,0 +1,142 @@
+/*
+*   Main styles
+*/
+/* line 25, ./src/styles/mainStyles.scss */
+.navBar {
+  background-color: #3D3B34;
+  color: white;
+}
+
+/* line 29, ./src/styles/mainStyles.scss */
+.blue {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* line 33, ./src/styles/mainStyles.scss */
+.lightblue {
+  background-color: #3E99ED;
+  color: white;
+}
+
+/* line 37, ./src/styles/mainStyles.scss */
+.blackblue {
+  background-color: #0B57A7;
+  color: white;
+}
+
+/* line 41, ./src/styles/mainStyles.scss */
+.orange {
+  background-color: #FC6B47;
+  color: white;
+}
+
+/* line 45, ./src/styles/mainStyles.scss */
+.green {
+  background-color: #2FA14A;
+  color: white;
+}
+
+/* line 49, ./src/styles/mainStyles.scss */
+.blackgreen {
+  background-color: #0F4F1D;
+  color: white;
+}
+
+/* line 53, ./src/styles/mainStyles.scss */
+.pink {
+  background-color: #E91E63;
+  color: white;
+}
+
+/* line 57, ./src/styles/mainStyles.scss */
+.teal {
+  background-color: #009688;
+  color: white;
+}
+
+/* line 61, ./src/styles/mainStyles.scss */
+.brown {
+  background-color: #795548;
+  color: white;
+}
+
+/* line 65, ./src/styles/mainStyles.scss */
+.bluegrey {
+  background-color: #607D8B;
+  color: white;
+}
+
+/* line 69, ./src/styles/mainStyles.scss */
+.lightred {
+  background-color: #F4383E;
+  color: white;
+}
+
+/* line 73, ./src/styles/mainStyles.scss */
+.red {
+  background-color: #9B2629;
+  color: white;
+}
+
+/* line 77, ./src/styles/mainStyles.scss */
+.selected {
+  color: #EFC028;
+}
+
+/* line 80, ./src/styles/mainStyles.scss */
+.DashboardIcon {
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 83, ./src/styles/mainStyles.scss */
+  .TitleInBox {
+    margin-top: 0px !important;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 83, ./src/styles/mainStyles.scss */
+  .TitleInBox {
+    margin-top: -20px !important;
+  }
+}
+
+/* line 93, ./src/styles/mainStyles.scss */
+.md-tile-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 30px;
+  text-overflow: ellipsis;
+}
+
+/* line 101, ./src/styles/mainStyles.scss */
+.md-tile-content h3 {
+  margin: 0 0 3px 0;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+/* line 106, ./src/styles/mainStyles.scss */
+.md-tile-content h4 {
+  margin: 0 0 3px 0;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+/* line 111, ./src/styles/mainStyles.scss */
+.md-tile-content p {
+  margin: 0 0 3px 0;
+  font-size: 0.75em;
+}
+
+@media screen and (max-width: 300px) {
+  /* line 117, ./src/styles/mainStyles.scss */
+  body {
+    background-color: lightblue;
+  }
+}
+
+

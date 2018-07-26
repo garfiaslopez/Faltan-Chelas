@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Colores principales-->
+    <color name="colorPrimary">#3E3D38</color>
+    <color name="colorPrimaryDark">#504F4A</color>
+    <color name="colorAccent">#E8D606</color>
+
+    <color name="floatingButton">#E8E8E8</color>
+
+    <color name="gray">#BEBEBD</color>
+
+    <!--Colores login y registro-->
+    <color name="background">#3E3D38</color>
+    <color name="loginButton">#E8D606</color>
+    <color name="registerButton">#504F4A</color>
+    <color name="registerBorderButton">#BEBEBD</color>
+
+    <!--Colores de textos-->
+    <color name="textWhite">#FFFFFF</color>
+
+</resources>

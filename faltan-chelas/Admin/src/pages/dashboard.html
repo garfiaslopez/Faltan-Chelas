@@ -1,0 +1,109 @@
+<section>
+
+    <md-grid-list layout-margin flex
+                md-cols-sm="2" md-cols="3" md-cols-gt-md="3"
+                md-row-height="2:1" md-row-height-sm="2:2"
+                md-gutter="12px">
+
+        <md-grid-tile class="md-whiteframe-z1 orange">
+
+            <div layout-fill layout="row" layout-sm="column" class="md-tile-content">
+                <div layout-fill layout="column" layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox">Totales </h2>
+                    <h2 class="TitleInBox">0</h2>
+                </div>
+                <div layout-fill layout="column" layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox">Online </h2>
+                    <h2 class="TitleInBox">0</h2>
+                </div>
+            </div>
+
+            <md-grid-tile-footer>
+                <div class="md-tile-content" layout="row">
+                    <md-icon class="DashboardIcon" md-svg-icon="user"></md-icon>
+                    <h3 layout-padding>Usuarios</h3>
+                </div>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+
+
+        <md-grid-tile class="md-whiteframe-z1 green">
+
+            <div layout-fill layout="row" layout-sm="column" class="md-tile-content">
+                <div layout-fill layout="column" layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox">Totales </h2>
+                    <h2 class="TitleInBox">0</h2>
+                </div>
+                <div layout-fill layout="column" layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox">Online </h2>
+                    <h2 class="TitleInBox">0</h2>
+                </div>
+            </div>
+
+            <md-grid-tile-footer>
+                <div class="md-tile-content" layout="row">
+                    <md-icon class="DashboardIcon" md-svg-icon="commercializer"></md-icon>
+                    <h3 layout-padding>Vendedores</h3>
+                </div>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+
+
+        <md-grid-tile class="md-whiteframe-z1 teal">
+
+            <div layout-fill layout="row" layout-sm="column" class="md-tile-content">
+                <div layout-fill layout="column" layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox"># {{Dashboard.OrdersOnDB.length}}</h2>
+                </div>
+                <div layout-fill layout="column"  layout-sm="row" layout-align="center center" class="md-tile-content">
+                    <h2 class="TitleInBox">${{Dashboard.ordersTotal}}</h2>
+                </div>
+            </div>
+
+            <md-grid-tile-footer>
+                <div class="md-tile-content" layout="row">
+                    <md-icon class="DashboardIcon" md-svg-icon="sell"></md-icon>
+                    <h3 layout-padding>Compras</h3>
+                </div>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+    </md-grid-list>
+
+    <md-divider></md-divider>
+    <md-subheader class="md-primary">Detalle</md-subheader>
+    <md-content>
+        <md-table-container>
+            <table md-table md-progress="Dashboard.isLoading">
+                <thead md-head>
+                    <tr md-row>
+                        <th md-column>OrderID</th>
+                        <th md-column>Fecha</th>
+                        <th md-column>Usuario</th>
+                        <th md-column>Vendedor</th>
+                        <th md-column>Direccion</th>
+                        <th md-column>total</th>
+                        <th md-column>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-auto-select ng-repeat="OrderDB in Dashboard.OrdersOnDB">
+                        <td md-cell>{{OrderDB.order_id}}</td>
+                        <td md-cell>{{OrderDB.date}}</td>
+                        <td md-cell>{{OrderDB.user_id.name}}</td>
+                        <td md-cell>{{OrderDB.vendor_id.name}}</td>
+                        <td md-cell>{{OrderDB.destiny.denomination}}</td>
+                        <td md-cell>${{OrderDB.total}}</td>
+                        <td md-cell>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+        <md-table-pagination md-limit="10" md-limit-options="[5, 10]" md-page="Dashboard.actualPage" md-total="{{Dashboard.OrdersOnDB.length}}" md-on-paginate="Dashboard.onPaginate" md-page-select></md-table-pagination>
+    </md-content>
+
+
+</section>

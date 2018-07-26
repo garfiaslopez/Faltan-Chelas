@@ -1,0 +1,112 @@
+<html ng-app="LoginApp">
+<head>
+    <title>Iniciar Sesion</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <base href="/#">
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+
+</head>
+
+<body >
+
+    
+    <section flex layout="column" ng-controller="LoginController">
+        
+        <md-toolbar id="toolbar" >
+            <h1 layout-align="center" class="md-toolbar-tools">Iniciar Sesion</h1>
+        </md-toolbar>
+
+        <md-icon md-svg-icon="userlogin" style="height:200px;width:200px;" class="name"></md-icon>
+
+        <br>
+
+        <md-content layout="row">
+
+            <md-content flex="20"layout="column">
+            </md-content>
+
+            <md-content flex="60" layout="column">
+
+                <form novalidate class="simple-form">
+
+                    <md-content layout-padding class="autoScroll">
+
+                        
+                        <md-input-container >
+
+                            <!-- Use floating placeholder instead of label -->
+                            <md-icon md-svg-icon="user" class="name"></md-icon>
+                            <input ng-model="loginData.username" type="text" placeholder="Username" ng-required="true">
+
+                        </md-input-container>
+                        <md-input-container >
+
+                            <!-- Use floating placeholder instead of label -->
+                            <md-icon md-svg-icon="pass" class="password"></md-icon>
+                            <input ng-model="loginData.password" type="password" placeholder="Password" ng-required="true">
+
+                        </md-input-container>
+                    </md-content>
+                    <br>
+                    <br>
+                    <br>
+                    <div layout="row" layout-align="space-around">
+
+                        <md-button id="primarybtn" ng-click="doLogin(loginData)" class="md-raised md-primary">Iniciar Sesion</md-button>
+
+                    </div>
+                    <br>
+                    <br>
+
+                </form>
+
+            </md-content>
+
+            <md-content flex="20" layout="column">
+            </md-content>
+
+
+
+        </md-content>
+
+
+    </section>
+    
+    <script type="text/javascript">
+        window.env = "{[{process.env.NODE_ENV}]}";
+        window.APIURL = "{[{config.APIURL}]}";
+        window.baseURL = "{[{config.baseURL}]}";
+
+    </script>
+
+    <!-- Angular-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+
+    <!-- Angular Material Dependencies -->
+    <script src="../bower_components/angular-material/angular-material.min.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+    
+   <!-- Angular Services -->
+    <script type="text/javascript" src="../src/js/services/authservice.js"></script>
+ 
+    <!-- JS -->
+    <script type="text/javascript" src="../src/js/controllers/logincontroller.js"></script>
+
+
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="layout.fragment_perfil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/actualizarPerfil"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nombrePersonalActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:lines="1"
+            android:inputType="text"
+            android:hint="@string/nombrePersonal"/>
+
+        <EditText
+            android:id="@+id/cellphoneActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:lines="1"
+            android:inputType="phone"
+            android:hint="@string/cellphone"/>
+
+        <EditText
+            android:id="@+id/emailActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:lines="1"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"/>
+
+        <EditText
+            android:id="@+id/passwordActual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:hint="@string/passwordActual"/>
+
+        <EditText
+            android:id="@+id/passwordNueva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:hint="@string/passwordNueva"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actualizarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center|bottom"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnActualizarPerfil"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/actualizarPerfil"
+            android:layout_gravity="center"
+            android:textColor="@color/textWhite"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</RelativeLayout>

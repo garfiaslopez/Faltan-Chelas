@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    tools:context="com.example.gargui3.faltanchelas.Repartir"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:text="@string/titleRepartir"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:textAlignment="center"
+        android:text="@string/cuentanos"/>
+
+    <EditText
+        android:id="@+id/nombrePersonalSolicitante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:hint="@string/nombreSolicitante"
+        android:lines="1"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/emailSolicitante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/emailSolicitante"
+        android:lines="1"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/phoneSolicitante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/celSolicitante"
+        android:lines="1"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/descriptionSolicitante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/descripcionSolicitante"
+        android:layout_weight="0.35"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:textColor="@color/textWhite"
+        android:text="@string/send"
+        android:onClick="enviarDatos"/>
+
+</LinearLayout>

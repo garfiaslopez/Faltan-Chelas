@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.fragment_pedir">
+
+    <com.google.android.gms.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/realizarPedido" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/realizarPedido"
+        android:id="@+id/linearLayout8">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/Direccion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/textWhite"
+            android:drawableLeft="@mipmap/fullbeer"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="@dimen/caja" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="60dp"
+            android:src="@mipmap/marker"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/realizarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center|bottom"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btncontinuarPedido"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/btnPedido"
+            android:layout_gravity="center"
+            android:textColor="@color/textWhite"
+            android:drawableRight="@mipmap/arrow"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/getMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@mipmap/ic_action_location_2"
+        android:layout_alignBottom="@+id/map"
+        android:layout_alignRight="@+id/linearLayout8"
+        android:layout_alignEnd="@+id/linearLayout8"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:theme="@style/AppTheme.FloatingActionButton"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<resources>
+
+    <!--Variables de la app-->
+    <string name="app_name">Faltan Chelas</string>
+
+    <!--Variables access-->
+    <string name="slogan">CERVEZA EN TU CASA EN MENOS DE 15 MINUTOS</string>
+    <string name="request">¿Quieres repartir?</string>
+    <string name="avisoPrivacidad">Términos y Condiciones</string>
+
+    <!--Variables de usuario-->
+    <string name="nombrePersonal">Nombre</string>
+    <string name="cellphone">Celular</string>
+    <string name="password">Contraseña</string>
+    <string name="passwordActual">Contraseña Actual</string>
+    <string name="passwordNueva">Nueva Contraseña</string>
+    <string name="email">Correo Electronico</string>
+
+    <!--Variables de inicio o registro-->
+    <string name="singin">Iniciar Sesión</string>
+    <string name="singup">Registrarse</string>
+
+    <!--Variables del menu-->
+    <string name="pedir">Realizar pedido</string>
+    <string name="historial">Historial</string>
+    <string name="perfil">Perfil</string>
+    <string name="datospago">Datos de Pago</string>
+    <string name="help">Ayuda</string>
+    <string name="logout">Cerrar Sesión</string>
+
+    <!--Variables basicas-->
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="back">Atras</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Configuraciones</string>
+
+    <string name="navigation_drawer_open">Abriendo</string>
+    <string name="navigation_drawer_close">Cerrando</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="construccion">Pagina en construcción</string>
+
+    <!--Variables vista ayuda-->
+    <string name="textHelp">Contactanos con nosotros</string>
+    <string name="title">Problema</string>
+    <string name="description">Descripción</string>
+    <string name="send">Enviar</string>
+
+    <!--Variables vista terminos-->
+    <string name="descripcionTerminosCondiciones">Bla bla bla bla bla bla loics a faltan chelas</string>
+
+    <!--Variables login-->
+    <string name="bienvenido">BIENVENIDO</string>
+    <string name="chelasCerca">ESTÁS CADA VEZ MÁS CERCA DE TUS CHELAS</string>
+    <string name="forgotPassword">Olvidaste tu Contraseña</string>
+
+    <!--Variables pedido-->
+    <string name="btnPedido">Quiero Chelas</string>
+    <string name="btnContinuar">Continuar</string>
+    <string name="chelasEncamino">¡TUS CHELAS VAN EN CAMINO!</string>
+
+    <!--Variables calificar-->
+    <string name="chelasLlegaron">¡TUS CHELAS HAN LLEGADO!</string>
+    <string name="califica">Califica a tu repartidor</string>
+
+    <!--Variables forgotPassword-->
+    <string name="titleForgotPassword">Favor ingresar correo electronico:</string>
+
+    <!--Variables guardar tarjeta-->
+    <string name="nameTarjeta">Nombre propietario</string>
+    <string name="numeroTarjeta">Número tarjeta</string>
+    <string name="codigoTarjeta">CVC</string>
+    <string name="mesTarjeta">Mes de vencimiento</string>
+    <string name="anoTarjeta">Año de vencimiento</string>
+
+
+    <!--Variables perfil-->
+    <string name="actualizarPerfil">Actualizar</string>
+
+    <!--Variables repartir-->
+    <string name="titleRepartir">¿DESEAS REPARTIR?</string>
+    <string name="cuentanos">CUÉNTANOS UN POCO DE TI</string>
+    <string name="nombreSolicitante">Nombre</string>
+    <string name="emailSolicitante">Email</string>
+    <string name="celSolicitante">Celular</string>
+    <string name="descripcionSolicitante">Descripción</string>
+
+    <!--Variables datos pago-->
+    <string name="agregarTarjeta">Agregar Tarjeta</string>
+
+    <!--Variable de excepciones-->
+    <string name="correInvalidoException">Por favor ingresa un correo valido</string>
+    <string name="sinConexionException">Por favor conectate a internet</string>
+    <string name="camposVaciosException">Por favor rellena todos los campos</string>
+    <string name="maximoVendidoException">Haz comprado el maximo de chelas</string>
+    <string name="ventaMinimaException">Favor de al menos comprar un producto</string>
+    <string name="sinTarjetaException">Por Favor selecciona una tarjeta de pago</string>
+    <string name="errorSocketException">A ocurrido un error por favor intentarlo mas tarde</string>
+    <string name="notAcceptedSocketException">No hay tienderos disponibles por el momento</string>
+    <string name="notPaidAcceptedException">No se proceso el pago</string>
+    <string name="notVendorsAvailableException">No hay vendedores disponibles</string>
+    <string name="buyExpiredException">La venta fue acepta por otro repartidor</string>
+
+    <!--Claves cuentas externas-->
+    <string name="google_api_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBRZeUo2TTzzCTre9YOwNCNfB6DK-bHZgs</string>
+    <string name="conektaPublicKey">key_TVZiTMVsZmfMzNLjsy1T9Yw</string>
+    <string name="keyMailgun">key-f653875d04623700dd6733fca9b2bb32</string>
+
+    <!--URL SERVER-->
+    <!--Local-->
+    <!--<string name="ipaddress">http://192.168.0.103:3000</string>-->
+    <!--Digital Ocean-->
+    <string name="ipaddress">http://104.131.24.52:3000</string>
+    <!--Jose-->
+    <!--<string name="ipaddress">http://fb1a57a0.ngrok.io</string>-->
+
+</resources>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<section layout="column">
+
+    <md-content>
+        <md-table-container>
+            <table md-table md-progress="User.isLoading">
+                <thead md-head>
+                    <tr md-row>
+                        <th md-column>Nombre</th>
+                        <th md-column>Email</th>
+                        <th md-column>Telefono</th>
+                        <th md-column>Compras</th>
+                        <th md-column>$</th>
+                        <th md-column>Calif</th>
+                        <th md-column>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-auto-select ng-repeat="UserDB in User.UsersOnDB">
+                        <td md-cell>{{UserDB.name}}</td>
+                        <td md-cell>{{UserDB.email.address}}</td>
+                        <td md-cell>{{UserDB.phone}}</td>
+                        <td md-cell>{{UserDB.name}}</td>
+                        <td md-cell>{{UserDB.name}}</td>
+                        <td md-cell>{{UserDB.name}}</td>
+                        <td md-cell>
+                            <md-icon md-svg-icon="delete" aria-label="delete" ng-click="User.Delete(UserDB)" class="md-secondary md-hue-3"></md-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-data-table-pagination md-limit="10" md-page="1" md-total="{{User.UsersOnDB.length}}" md-trigger="onPaginationChange"></md-data-table-pagination>
+
+    </md-content>
+
+</section>

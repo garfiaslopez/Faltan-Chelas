@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Productos">
+                <md-content class="md-padding">
+
+                    <div flex layout="row" layout-sm="column" layout-align="center center">
+                        <div flex layout="column">
+                            <md-input-container>
+                                <label>Denominacion</label>
+                                <input ng-model="Product.Producto.denomination">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Descripción</label>
+                                <input ng-model="Product.Producto.description">
+                            </md-input-container>
+                        </div>
+                        <div flex layout="column">
+                            <md-radio-group ng-model="Product.Producto.type">
+                                <md-radio-button value="primary" class="md-accent">Principal</md-radio-button>
+                                <md-radio-button value="secondary" class="md-accent"> Opcional </md-radio-button>
+                            </md-radio-group>
+                        </div>
+                    </div>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+                        <md-button id="primarybtn" ng-click="Product.SubmitProduct()" class="md-raised md-primary">Guardar</md-button>
+                        <md-button id="secondarybtn" ng-click="Product.CancelProduct()" class="md-raised md-accent" ng-if="Product.EditingProduct.flag" > Cancelar</md-button>
+                    </div>
+
+                    <div flex layout="column">
+                        <md-subheader id="subtitle"  class="md-accent">Productos Existentes</md-subheader>
+
+                        <md-content flex  layout="column">
+                            <md-list-item ng-repeat="ProductDB in Product.ProductsOnDB" ng-click="Product.EditProduct(ProductDB)">
+                                <p>{{ ProductDB.denomination }}</p>
+                                <md-icon md-svg-icon="delete" aria-label="delete" ng-click="Product.DeleteProduct(ProductDB)" class="md-secondary md-hue-3"></md-icon>
+                            </md-list-item>
+                        </md-content>
+                    </div>
+
+                </md-content>
+
+
+            </md-tab>
+
+            <md-tab label="Precios">
+                <md-content class="md-padding">
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-between">
+                        <md-select style="width:250px"ng-model="Product.ProductSelected">
+                            <md-option ng-repeat="Pro in Product.ProductsOnDB" value="{{Pro._id}}">{{Pro.denomination}}</md-option>
+                        </md-select>
+                        <md-input-container>
+                            <label>Cantidad</label>
+                            <input ng-model="Product.Precio.quantity">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Precio</label>
+                            <input ng-model="Product.Precio.price">
+                        </md-input-container>
+                    </div>
+
+                    <div flex layout="row" layout-sm="column" layout-align="center center">
+                        <md-button id="primarybtn" ng-click="Product.SubmitPrice()" class="md-raised md-primary">Guardar</md-button>
+                        <md-button id="secondarybtn" ng-click="Product.CancelPrice()" class="md-raised md-accent" ng-if="Product.EditingPrice.flag" > Cancelar</md-button>
+                    </div>
+
+                    <md-subheader id="subtitle"  class="md-accent">Precios Existentes</md-subheader>
+
+                    <md-content ng-repeat="Pro in Product.ProductsOnDB" flex layout="row" layout-align="space-around">
+                        <md-content flex layout="column">
+                            <md-subheader class="md-primary">{{Pro.denomination}}</md-subheader>
+                            <md-list-item ng-repeat="Price in Pro.prices" ng-click="Product.EditPrice(Pro,Price)">
+                                <p>pack: {{ Price.quantity }}</p>
+                                <p>$ {{ Price.price }}</p>
+                                <md-icon md-svg-icon="delete" aria-label="delete" ng-click="Product.DeletePrice(Pro,Price)" class="md-secondary md-hue-3"></md-icon>
+                            </md-list-item>
+                        </md-content>
+                    </md-content>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

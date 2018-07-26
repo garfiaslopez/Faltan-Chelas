@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.fragment_pedir">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Resumen del día" />
+
+    <LinearLayout
+        android:id="@+id/cajas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="64dp">
+
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:paddingTop="30dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/textWhite"
+                android:text="Servicios"/>
+
+            <TextView
+                android:id="@+id/serviciosDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/textWhite"
+                android:text="#"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:paddingTop="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/textWhite"
+                android:text="Total"/>
+
+            <TextView
+                android:id="@+id/totalDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/textWhite"
+                android:text="$0.0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disponibilidad para entrega    "
+        android:id="@+id/disponibilidad"
+        android:textSize="20dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/cajas"
+        android:checked="true" />
+
+
+</RelativeLayout>

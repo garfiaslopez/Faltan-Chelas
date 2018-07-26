@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+
+            <md-tab label="Operadores">
+                <md-content class="md-padding">
+
+                    <md-content>
+                        <md-table-container>
+                            <table md-table md-progress="Vendor.isLoading">
+                                <thead md-head>
+                                    <tr md-row>
+                                        <th md-column>Nombre</th>
+                                        <th md-column>Email</th>
+                                        <th md-column>Telefono</th>
+                                        <th md-column>Compras</th>
+                                        <th md-column>$</th>
+                                        <th md-column>Calif</th>
+                                        <th md-column>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody md-body>
+                                    <tr md-row md-auto-select ng-repeat="VendorDB in Vendor.VendorsOnDB">
+                                        <td md-cell>{{VendorDB.name}}</td>
+                                        <td md-cell>{{VendorDB.email.address}}</td>
+                                        <td md-cell>{{VendorDB.phone}}</td>
+                                        <td md-cell>{{VendorDB.name}}</td>
+                                        <td md-cell>{{VendorDB.name}}</td>
+                                        <td md-cell>{{VendorDB.name}}</td>
+                                        <td md-cell>
+                                            <md-icon md-svg-icon="delete" aria-label="delete" ng-click="Vendor.Delete(VendorDB)" class="md-secondary md-hue-3"></md-icon>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </md-table-container>
+
+                        <md-data-table-pagination md-limit="10" md-page="1" md-total="{{Vendor.VendorsOnDB.length}}" md-trigger="onPaginationChange"></md-data-table-pagination>
+
+                    </md-content>
+
+
+                </md-content>
+            </md-tab>
+
+            <md-tab label="Agregar">
+                <md-content class="md-padding">
+
+                    <md-subheader id="subtitle"  class="md-primary">Datos Personales</md-subheader>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Email</label>
+                                <input ng-model="Vendor.Usuario.email">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Contraseña</label>
+                                <input ng-model="Vendor.Usuario.password">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Nombre Completo</label>
+                                <input ng-model="Vendor.Usuario.name">
+                            </md-input-container>
+                        </div>
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Nombre Negocio</label>
+                                <input ng-model="Vendor.Usuario.marketname">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Telefono</label>
+                                <input ng-model="Vendor.Usuario.phone">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Genero</label>
+                                <input ng-model="Vendor.Usuario.gender">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Fecha Nacimiento</label>
+                                <input ng-model="Vendor.Usuario.birthdate">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+                    <md-subheader class="md-primary">Datos Bancarios</md-subheader>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Banco</label>
+                                <input ng-model="Vendor.Usuario.paydata.bank">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Nombre</label>
+                                <input ng-model="Vendor.Usuario.paydata.name">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>CLABE</label>
+                                <input ng-model="Vendor.Usuario.paydata.clabe">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+                    <md-subheader class="md-primary">Otro Contacto</md-subheader>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Nombre</label>
+                                <input ng-model="Vendor.Usuario.othercontact.name">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="50" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Telefono</label>
+                                <input ng-model="Vendor.Usuario.othercontact.phone">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+                    <md-subheader class="md-primary">Dirección (Coordenadas)</md-subheader>
+
+                    <div flex layout="row" layout-sm="column" layout-align="space-around">
+
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Dirección</label>
+                                <input ng-model="Vendor.Usuario.loc.denomination">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Latitud</label>
+                                <input ng-model="Vendor.Usuario.loc.cord.lat">
+                            </md-input-container>
+                        </div>
+
+                        <div flex="33" flex-sm="100">
+                            <md-input-container class="md-block" >
+                                <label>Longitude</label>
+                                <input ng-model="Vendor.Usuario.loc.cord.long">
+                            </md-input-container>
+                        </div>
+
+                    </div>
+
+                    <div flex layout="row" layout-align="space-around center">
+                        <md-button id="primarybtn" ng-click="Vendor.Submit()" class="md-raised md-primary">Guardar</md-button>
+                    </div>
+
+                </md-content>
+            </md-tab>
+        </md-tabs>
+
+    </md-content>
+</div>

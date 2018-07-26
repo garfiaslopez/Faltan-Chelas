@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.gargui3.faltanchelas.Encamino">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/itshere"
+        android:id="@+id/imageView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/chelasLlegaron"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/accionesLinear"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center|bottom"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/calificaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/nombreUsuarioCalificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/uno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fullbeer2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:clickable="true"
+                android:onClick="uno"/>
+
+            <ImageView
+                android:id="@+id/dos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fullbeer2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:clickable="true"
+                android:onClick="dos"/>
+
+            <ImageView
+                android:id="@+id/tres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fullbeer2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:clickable="true"
+                android:onClick="tres"/>
+
+            <ImageView
+                android:id="@+id/cuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fullbeer2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:clickable="true"
+                android:onClick="cuatro"/>
+
+            <ImageView
+                android:id="@+id/cinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fullbeer2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:clickable="true"
+                android:onClick="cinco"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
